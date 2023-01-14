@@ -260,10 +260,10 @@ class Quote(BaseModel):
     week_52_high: float
     week_52_low: float
     bidsize: int
-    bidexch: str
+    bidexch: Optional[str] = None
     bid_date: datetime
     asksize: int
-    askexch: str
+    askexch: Optional[str] = None
     ask_date: datetime
     root_symbols: Optional[str] = None
     underlying: Optional[str] = None

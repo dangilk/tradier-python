@@ -17,7 +17,9 @@ https://documentation.tradier.com/brokerage-api/overview/market-data
 
 ### Installing
 
-pip install tradier-python
+# pip install tradier-python
+Since Dan has made changes to the api, you need to install this package manually from this directory using:
+`pip install .`
 
 ### Exmple
 
