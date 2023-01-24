@@ -208,7 +208,8 @@ class Order(BaseModel):
     strategy: Optional[str] = None
     tag: Optional[str] = None
     leg: Optional[List[Leg]] = None
-
+    class Config:
+        allow_population_by_field_name = True
 
 class Orders(BaseModel):
     order: List[Order] = []
