@@ -104,7 +104,8 @@ class Position(BaseModel):
     id: int
     quantity: float
     symbol: str
-
+    class Config:
+        allow_population_by_field_name = True
 
 class Positions(BaseModel):
     position: List[Position] = []
