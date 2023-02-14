@@ -34,7 +34,9 @@ class TradierAPI:
             )
         res_json = response.json()
         key = url.rsplit("/", 1)[-1]
-        if res_json.get(key) == "null":
+        if type(res_json) is list:
+            return {key: res_json}
+        if type(res_json) is dict and res_json.get(key) == "null":
             res_json[key] = []
         return res_json
 
